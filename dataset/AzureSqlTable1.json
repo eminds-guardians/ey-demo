@@ -1,0 +1,49 @@
+{
+    "name": "AzureSqlTable1",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureSqlDatabase1",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "name",
+                "type": "varchar"
+            },
+            {
+                "name": "author",
+                "type": "varchar"
+            },
+            {
+                "name": "narrator",
+                "type": "varchar"
+            },
+            {
+                "name": "time",
+                "type": "varchar"
+            },
+            {
+                "name": "releasedate",
+                "type": "varchar"
+            },
+            {
+                "name": "language",
+                "type": "varchar"
+            },
+            {
+                "name": "stars",
+                "type": "varchar"
+            },
+            {
+                "name": "price",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "ratings"
+        }
+    }
+}
