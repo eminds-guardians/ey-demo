@@ -57,7 +57,6 @@
 				"          ratings = replace(ratings,\"stars\",''),",
 				"          releasedate = toString(toDate(releasedate, 'dd-MM-yyyy'),'dd/MM/20yy')) ~> derivedColumn2",
 				"derivedColumn2 derive(ratings = iifNull(ratings,'0',''),",
-				"          releasedate = toDate(releasedate,'dd/MM/yyyy'),",
 				"          price = replace(price, '.00', '')) ~> derivedColumn3",
 				"derivedColumn3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
