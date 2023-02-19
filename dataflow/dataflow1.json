@@ -30,6 +30,9 @@
 				},
 				{
 					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn4"
 				}
 			],
 			"scriptLines": [
@@ -58,7 +61,8 @@
 				"          releasedate = toString(toDate(releasedate, 'dd-MM-yy'),'dd/MM/yyyy')) ~> derivedColumn2",
 				"derivedColumn2 derive(ratings = iifNull(ratings,'0',''),",
 				"          price = replace(price, '.00', '')) ~> derivedColumn3",
-				"derivedColumn3 sink(allowSchemaDrift: true,",
+				"derivedColumn3 derive(releasedate = toDate(releasedate,'dd/MM/yyyy')) ~> derivedColumn4",
+				"derivedColumn4 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          name as string,",
