@@ -10,10 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: SqlDacpacDeploymentOnMachineGroup@0
+  inputs:
+    TaskType: 'sqlQuery'
+    SqlFile: 'output\ratings_cleaned_ddl.sql'
+    ServerName: '$(SQL_ServerName).database.windows.net'
+    DatabaseName: '$(SQL_DatabaseName)'
+    AuthScheme: 'sqlServerAuthentication'
+    SqlUsername: '$(SQL_UserName)'
+    SqlPassword: '$(SQL_Password)'
