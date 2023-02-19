@@ -55,7 +55,7 @@
 				" + iif(isNull(toInteger(regexExtract(time,'(\\\\d+) mins',1))),0, toInteger(regexExtract(time,'(\\\\d+) mins',1)))) ~> derivedColumn1",
 				"derivedColumn1 derive(stars = split(stars, \" \")[1],",
 				"          ratings = replace(ratings,\"stars\",''),",
-				"          releasedate = toString(toDate(releasedate, 'dd-MM-yyyy'),'dd/MM/20yy')) ~> derivedColumn2",
+				"          releasedate = toString(toDate(releasedate, 'dd-MM-yy'),'dd/MM/yyyy')) ~> derivedColumn2",
 				"derivedColumn2 derive(ratings = iifNull(ratings,'0',''),",
 				"          price = replace(price, '.00', '')) ~> derivedColumn3",
 				"derivedColumn3 sink(allowSchemaDrift: true,",
