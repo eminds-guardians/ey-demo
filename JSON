@@ -1,1 +1,16 @@
-{    "table_name": "ratings-cleaned",    "query_type": "ddl",    "query": [        {            "version": "v1",            "query_text": "CREATE SET TABLE RATINGS_CLEANED,FALLBACK( name VARCHAR(220), author VARCHAR(93), narrator VARCHAR(120), time VARCHAR(20), releasedate DATE FORMAT 'YYYY-MM-DD', language VARCHAR(16), stars VARCHAR(31), price INTEGER ratings VARCHAR(10) ) UNIQUE PRIMARY INDEX(name);",            "date": "2023-02-19"        },        {            "version": "latest",            "query_text": "CREATE SET TABLE RATINGS_CLEANED,FALLBACK( name VARCHAR(220), author VARCHAR(93), narrator VARCHAR(120), time_in_minutes INTEGER, releasedate DATE FORMAT 'YYYY-MM-DD', language VARCHAR(16), stars VARCHAR(31), price INTEGER ratings VARCHAR(10) ) UNIQUE PRIMARY INDEX(name);",            "date": "2023-02-20"        }    ]}
+{
+  "table_name": "ratings-cleaned",
+  "query_type": "ddl",
+  "query": [
+    {
+      "version": "v1",
+      "query_text": "CREATE SET TABLE RATINGS_CLEANED,FALLBACK( name VARCHAR(220), author VARCHAR(93), narrator VARCHAR(120), time VARCHAR(20), releasedate DATE FORMAT 'YYYY-MM-DD', language VARCHAR(16), stars VARCHAR(31), price INTEGER ratings VARCHAR(10) ) UNIQUE PRIMARY INDEX(name);",
+      "date": "2023-02-19"
+    },
+    {
+      "version": "latest",
+      "query_text": "CREATE SET TABLE RATINGS_CLEANED,FALLBACK( name VARCHAR(220), author VARCHAR(93), narrator VARCHAR(120), time_in_minutes INTEGER, releasedate DATE FORMAT 'YYYY-MM-DD', language VARCHAR(16), stars VARCHAR(31), price INTEGER ratings VARCHAR(10) ) UNIQUE PRIMARY INDEX(name);",
+      "date": "2023-02-20"
+    }
+  ]
+}
