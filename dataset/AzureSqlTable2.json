@@ -1,0 +1,53 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqldatabases",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "author",
+				"type": "varchar"
+			},
+			{
+				"name": "narrator",
+				"type": "varchar"
+			},
+			{
+				"name": "time",
+				"type": "varchar"
+			},
+			{
+				"name": "releasedate",
+				"type": "date"
+			},
+			{
+				"name": "language",
+				"type": "varchar"
+			},
+			{
+				"name": "stars",
+				"type": "varchar"
+			},
+			{
+				"name": "price",
+				"type": "varchar"
+			},
+			{
+				"name": "ratings",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ratings_cleaned"
+		}
+	}
+}
